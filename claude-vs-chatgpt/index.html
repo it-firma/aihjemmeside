@@ -42,6 +42,11 @@ nav { padding: 16px 40px; display: flex; align-items: center; position: sticky; 
 .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 16px; text-decoration: none; color: #0D0D0D; }
 .logo-circle { width: 32px; height: 32px; background: #FFD4BA; color: #0D0D0D; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; }
 .back-link { margin-left: auto; font-size: 14px; color: #555; text-decoration: none; }
+.nav-links-sub { display: flex; gap: 24px; margin-left: 32px; margin-right: auto; }
+.nav-links-sub a { color: #555; text-decoration: none; font-size: 14.5px; font-weight: 500; transition: color 0.15s; }
+.nav-links-sub a:hover { color: #0D0D0D; }
+.back-link:hover { color: #0D0D0D; }
+
 .container { max-width: 800px; margin: 0 auto; padding: 60px 40px; }
 .breadcrumb { font-size: 13px; color: #888; margin-bottom: 20px; }
 .breadcrumb a { color: #555; text-decoration: none; }
@@ -69,7 +74,7 @@ p { font-size: 16px; color: #333; line-height: 1.75; margin-bottom: 16px; }
 .vs-card h3 { margin-top: 0; font-size: 20px; margin-bottom: 16px; }
 .vs-card ul { list-style: none; padding: 0; }
 .vs-card li { padding: 8px 0 8px 24px; position: relative; font-size: 14.5px; color: #333; line-height: 1.6; }
-.vs-card li::before { content: '\u2022'; position: absolute; left: 8px; color: #5FE388; font-weight: 700; }
+.vs-card li::before { content: '•'; position: absolute; left: 8px; color: #5FE388; font-weight: 700; }
 .vs-card .price { font-size: 28px; font-weight: 800; color: #0D0D0D; margin-bottom: 6px; }
 .vs-card .price-sub { font-size: 13px; color: #666; margin-bottom: 16px; }
 
@@ -92,6 +97,7 @@ footer a { color: #0D0D0D; text-decoration: none; font-weight: 600; }
 
 @media (max-width: 860px) {
   nav { padding: 14px 20px; }
+  .nav-links-sub { display: none; }
   .container { padding: 40px 20px; }
   .vs-grid { grid-template-columns: 1fr; }
 }
