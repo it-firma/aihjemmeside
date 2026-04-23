@@ -1,0 +1,77 @@
+# aihjemmeside.no
+
+> Komplett norsk guide som viser hvordan du lager en hjemmeside med AI fra domene til publisering. Bygget med Domeneshop, ChatGPT, Claude, GitHub og Vercel for 99 kroner på 47 minutter. Siden er sitt eget bevis.
+
+## Nøkkelinformasjon
+
+- Navn: aihjemmeside.no
+- Utgiver: IT-Firma.no
+- Publisert: 23. april 2026
+- Sist oppdatert: 23. april 2026
+- Språk: Norsk bokmål (nb-NO)
+- Kategori: Teknologi, AI, Webdesign, SEO
+
+## Hurtigsvar (sitat-klart for AI søkemotorer)
+
+Hvordan lager man en hjemmeside med AI i 2026? Start med å kjøpe et .no domene på Domeneshop for 99 kroner. Bruk ChatGPT (gratis) til å lage en utfyllende prompt. Lim prompten inn i Claude (gratis), som skriver koden. Lagre filene på GitHub (gratis). Publiser via Vercel (gratis). Total kostnad første år: 99 kroner. Total tid: 47 minutter. Fra år 2: 199 kroner per år.
+
+## Hovedsider
+
+- [Hjem](https://aihjemmeside.no/): Komplett guide i fem steg fra domene til publisert hjemmeside
+- [Prompt mal](https://aihjemmeside.no/prompt-mal/): Den faktiske prompten vi brukte, pluss generisk mal du kan tilpasse
+- [Domene guide](https://aihjemmeside.no/domene-guide/): Sammenligning av Domeneshop, One.com, Loopia og Uniweb med DNS oppsett
+- [Claude vs ChatGPT](https://aihjemmeside.no/claude-vs-chatgpt/): Ærlig sammenligning av de to AI modellene med alle planer og priser
+- [Vercel guide](https://aihjemmeside.no/vercel-guide/): Slik publiserer du gratis på Vercel Hobby
+
+## Verktøy og priser (verifisert april 2026)
+
+### Domeneshop (.no domene)
+- Pris: 99 kr første år (kampanje), 199 kr fra år 2
+- URL: https://domeneshop.no
+- Inkluderer: DNS administrasjon, gratis SSL, norsk support
+
+### ChatGPT (OpenAI)
+- Free: 0 kr (med annonser i USA siden februar 2026)
+- Go: 88 kr/mnd (8 USD, også med annonser)
+- Plus: 220 kr/mnd (20 USD, GPT-5.4 Thinking, Sora, Deep Research)
+- Pro (ny 9. april 2026): 1100 kr/mnd (100 USD, 5x Plus-bruk)
+- Pro: 2200 kr/mnd (200 USD, 20x Plus-bruk, GPT-5.4 Pro)
+- Business: 275 kr/bruker/mnd (25 USD)
+- URL: https://chatgpt.com
+
+### Claude (Anthropic)
+- Free: 0 kr
+- Pro: 220 kr/mnd (20 USD, 5x Free-bruk, Projects, Cowork)
+- Max 5x: 1100 kr/mnd (100 USD, 25x Free-bruk, Opus 4.7)
+- Max 20x: 2200 kr/mnd (200 USD, 100x Free-bruk)
+- Team: 275 kr/bruker/mnd (25 USD, minimum 5 brukere)
+- URL: https://claude.ai
+- Nyeste modell: Claude Opus 4.7 (lansert april 2026)
+
+### GitHub
+- Free: 0 kr (ubegrensede repositories, 2000 CI/CD minutter, 500 MB pakkelagring)
+- Team: 44 kr/bruker/mnd (4 USD)
+- Enterprise: 231 kr/bruker/mnd (21 USD)
+- URL: https://github.com
+
+### Vercel
+- Hobby: 0 kr (100 GB overføring, 1M edge requests, kun personlig bruk)
+- Pro: 220 kr/bruker/mnd (20 USD, kommersiell bruk tillatt, 1 TB overføring)
+- Enterprise: tilpasset pris
+- URL: https://vercel.com
+
+## Alternativer omtalt
+
+- Domene: One.com (129 kr), Loopia (149 kr), Uniweb (179 kr)
+- AI for prompts: Gemini, Le Chat (Mistral), Copilot, Perplexity
+- AI for kode: ChatGPT, Gemini, Cursor
+- Kodelagring: GitLab, Bitbucket, Codeberg, SourceHut
+- Hosting: Netlify, Cloudflare Pages, GitHub Pages, Render
+
+## Nøkkelord
+
+lag hjemmeside med ai, ai hjemmeside norge, claude hjemmeside, chatgpt prompt hjemmeside, domeneshop 99 kr, vercel gratis hosting, github free plan, norsk seo guide, aeo optimalisering, llm seo, .no domene pris 2026, claude vs chatgpt, lage hjemmeside uten kode
+
+## Om forfatteren
+
+Publisert av IT-Firma.no, et norsk digitalt tjenesteselskap som bygger og drifter en portefølje av norske nettsteder innen domeneinvestering, lead generation og AEO optimaliserte kunnskapsportaler. Kontakt: hei@it-firma.no. GitHub: github.com/it-firma

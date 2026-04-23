@@ -1,0 +1,24 @@
+{
+  "name": "aihjemmeside.no",
+  "short_name": "aihjemmeside",
+  "description": "Lag hjemmeside med AI. Komplett norsk guide.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFBFC",
+  "theme_color": "#FFD4BA",
+  "lang": "nb-NO",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

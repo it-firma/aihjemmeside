@@ -1,0 +1,134 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "aihjemmeside.no entity index",
+  "description": "Strukturerte data om alle verktøy, priser og ressurser nevnt på aihjemmeside.no",
+  "inLanguage": "nb-NO",
+  "dateCreated": "2026-04-23",
+  "dateModified": "2026-04-23",
+  "publisher": {
+    "@type": "Organization",
+    "name": "IT-Firma.no",
+    "url": "https://it-firma.no",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "aiå.no"
+    }
+  },
+  "entities": {
+    "tools": [
+      {
+        "name": "Domeneshop",
+        "category": "Domeneregistrar",
+        "url": "https://domeneshop.no",
+        "country": "Norge",
+        "priceFirstYear": "99 NOK",
+        "priceRenewal": "199 NOK/år",
+        "step": 1,
+        "usedInBuild": true,
+        "alternatives": ["One.com", "Loopia", "Uniweb"]
+      },
+      {
+        "name": "ChatGPT",
+        "category": "AI chatbot",
+        "url": "https://chatgpt.com",
+        "provider": "OpenAI",
+        "plans": {
+          "Free": {"price": "0 NOK", "features": "Med annonser i USA siden feb 2026"},
+          "Go": {"price": "88 NOK/mnd", "priceUSD": "8 USD"},
+          "Plus": {"price": "220 NOK/mnd", "priceUSD": "20 USD"},
+          "Pro100": {"price": "1100 NOK/mnd", "priceUSD": "100 USD", "launched": "2026-04-09"},
+          "Pro200": {"price": "2200 NOK/mnd", "priceUSD": "200 USD"},
+          "Business": {"price": "275 NOK/bruker/mnd", "priceUSD": "25 USD"}
+        },
+        "step": 2,
+        "usedInBuild": true,
+        "purposeInBuild": "Prompt engineering"
+      },
+      {
+        "name": "Claude",
+        "category": "AI chatbot",
+        "url": "https://claude.ai",
+        "provider": "Anthropic",
+        "latestModel": "Claude Opus 4.7",
+        "plans": {
+          "Free": {"price": "0 NOK"},
+          "Pro": {"price": "220 NOK/mnd", "priceUSD": "20 USD"},
+          "Max5x": {"price": "1100 NOK/mnd", "priceUSD": "100 USD"},
+          "Max20x": {"price": "2200 NOK/mnd", "priceUSD": "200 USD"},
+          "Team": {"price": "275 NOK/bruker/mnd", "priceUSD": "25 USD", "minSeats": 5}
+        },
+        "step": 3,
+        "usedInBuild": true,
+        "purposeInBuild": "Koding av hjemmesiden"
+      },
+      {
+        "name": "GitHub",
+        "category": "Kode versjonskontroll",
+        "url": "https://github.com",
+        "plans": {
+          "Free": {"price": "0 NOK", "features": "Ubegrensede repositories, 2000 CI/CD minutter"},
+          "Team": {"price": "44 NOK/bruker/mnd", "priceUSD": "4 USD"},
+          "Enterprise": {"price": "231 NOK/bruker/mnd", "priceUSD": "21 USD"}
+        },
+        "step": 4,
+        "usedInBuild": true,
+        "purposeInBuild": "Lagring og versjonering av filer"
+      },
+      {
+        "name": "Vercel",
+        "category": "Hosting",
+        "url": "https://vercel.com",
+        "plans": {
+          "Hobby": {"price": "0 NOK", "features": "100 GB overføring, 1M edge requests, kun personlig bruk"},
+          "Pro": {"price": "220 NOK/bruker/mnd", "priceUSD": "20 USD", "features": "Kommersiell bruk tillatt"},
+          "Enterprise": {"price": "Tilpasset"}
+        },
+        "step": 5,
+        "usedInBuild": true,
+        "purposeInBuild": "Publisering på internett"
+      }
+    ],
+    "alternatives": {
+      "domainRegistrars": [
+        {"name": "One.com", "url": "https://one.com/no", "price": "129 NOK/år"},
+        {"name": "Loopia", "url": "https://loopia.no", "price": "149 NOK/år"},
+        {"name": "Uniweb", "url": "https://uniweb.no", "price": "179 NOK/år"}
+      ],
+      "aiModels": [
+        {"name": "Gemini", "url": "https://gemini.google.com", "provider": "Google"},
+        {"name": "Le Chat", "url": "https://chat.mistral.ai", "provider": "Mistral"},
+        {"name": "Copilot", "url": "https://copilot.microsoft.com", "provider": "Microsoft"},
+        {"name": "Perplexity", "url": "https://perplexity.ai"},
+        {"name": "Cursor", "url": "https://cursor.com"}
+      ],
+      "codeHosting": [
+        {"name": "GitLab", "url": "https://gitlab.com"},
+        {"name": "Bitbucket", "url": "https://bitbucket.org"},
+        {"name": "Codeberg", "url": "https://codeberg.org"},
+        {"name": "SourceHut", "url": "https://sourcehut.org", "price": "50 NOK/mnd"}
+      ],
+      "hosting": [
+        {"name": "Netlify", "url": "https://netlify.com"},
+        {"name": "Cloudflare Pages", "url": "https://pages.cloudflare.com"},
+        {"name": "GitHub Pages", "url": "https://pages.github.com"},
+        {"name": "Render", "url": "https://render.com"}
+      ]
+    },
+    "pages": [
+      {"url": "https://aihjemmeside.no/", "title": "Komplett guide: Lag hjemmeside med AI"},
+      {"url": "https://aihjemmeside.no/prompt-mal/", "title": "Prompt mal for AI hjemmeside"},
+      {"url": "https://aihjemmeside.no/domene-guide/", "title": "Slik kjøper du et .no domene"},
+      {"url": "https://aihjemmeside.no/claude-vs-chatgpt/", "title": "Claude vs ChatGPT sammenligning"},
+      {"url": "https://aihjemmeside.no/vercel-guide/", "title": "Vercel guide: Publiser gratis"}
+    ],
+    "build": {
+      "totalCostYear1": "99 NOK",
+      "totalCostFromYear2": "199 NOK/år",
+      "buildTimeMinutes": 47,
+      "promptsUsed": 1,
+      "aiModelsUsed": ["ChatGPT", "Claude"],
+      "technology": "Static HTML, CSS, vanilla JavaScript"
+    }
+  }
+}
