@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Claude vs ChatGPT: Hvilken er best for hjemmesider i 2026? | aihjemmeside.no</title>
-<meta name="description" content="Ærlig sammenligning av Claude og ChatGPT for å lage hjemmesider. Priser, kvalitet, norsk språk og bruksområder. Vi testet begge grundig i 2026.">
-<meta name="keywords" content="claude vs chatgpt, ai sammenligning, claude eller chatgpt, beste ai for koding, norsk ai">
+<title>Slik publiserer du hjemmeside gratis i 2026 | Vercel, Netlify, Cloudflare</title>
+<meta name="description" content="Komplett guide for å publisere hjemmeside gratis i 2026. Sammenligning av Vercel, Netlify, Cloudflare Pages og GitHub Pages. DNS oppsett og domenekobling.">
+<meta name="keywords" content="vercel, vercel norge, gratis hosting, vercel guide, publisere hjemmeside, vercel github">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://aihjemmeside.no/claude-vs-chatgpt/">
+<link rel="canonical" href="https://aihjemmeside.no/publisering/">
 
 <meta property="og:locale" content="nb_NO">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Claude vs ChatGPT: Hvilken er best for hjemmesider?">
-<meta property="og:description" content="Ærlig sammenligning av Claude og ChatGPT for å lage hjemmesider. Vi testet begge i 2026.">
+<meta property="og:title" content="Slik publiserer du hjemmeside gratis | Vercel, Netlify, Cloudflare">
+<meta property="og:description" content="Sammenligning av gratis hosting tjenester. Vercel, Netlify, Cloudflare Pages. DNS oppsett inkludert.">
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232DE8A8'/%3E%3Ctext x='50' y='68' font-family='Inter,sans-serif' font-size='52' font-weight='800' text-anchor='middle' fill='%230B1226'%3EAI%3C/text%3E%3C/svg%3E">
 <meta name="theme-color" content="#0B1226">
@@ -22,14 +22,14 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Claude vs ChatGPT: Hvilken er best for hjemmesider i 2026",
-  "description": "Sammenligning av Claude og ChatGPT for å lage hjemmesider. Priser, kvalitet og bruksområder i 2026.",
+  "headline": "Slik publiserer du hjemmeside gratis i 2026",
+  "description": "Komplett norsk guide for å publisere hjemmeside gratis. Sammenligning av Vercel, Netlify, Cloudflare Pages.",
   "author": {"@type": "Organization", "name": "IT-Firma.no"},
   "publisher": {"@type": "Organization", "name": "aihjemmeside.no"},
   "datePublished": "2026-04-23",
   "dateModified": "2026-04-23",
   "inLanguage": "nb-NO",
-  "mainEntityOfPage": "https://aihjemmeside.no/claude-vs-chatgpt/"
+  "mainEntityOfPage": "https://aihjemmeside.no/publisering/"
 }
 </script>
 
@@ -49,35 +49,21 @@ p { font-size: 16px; color: rgba(255,255,255,0.8); line-height: 1.75; margin-bot
 .lede { font-size: 19px; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 28px; }
 .meta-info { font-size: 13px; color: rgba(255,255,255,0.7); padding-bottom: 24px; border-bottom: 1px solid #E5E5E5; margin-bottom: 40px; }
 
-.vs-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin: 28px 0;
-}
-.vs-card {
-  background: rgba(255,255,255,0.04);
-  padding: 28px;
-  border-radius: 14px;
-  border: 1px solid #E5E5E5;
-}
-.vs-card.claude { border-top: 4px solid #D97757; }
-.vs-card.chatgpt { border-top: 4px solid #10A37F; }
-.vs-card h3 { margin-top: 0; font-size: 20px; margin-bottom: 16px; }
-.vs-card ul { list-style: none; padding: 0; }
-.vs-card li { padding: 8px 0 8px 24px; position: relative; font-size: 14.5px; color: rgba(255,255,255,0.8); line-height: 1.6; }
-.vs-card li::before { content: '•'; position: absolute; left: 8px; color: #2DE8A8; font-weight: 700; }
-.vs-card .price { font-size: 28px; font-weight: 800; color: white; margin-bottom: 6px; }
-.vs-card .price-sub { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 16px; }
+.step-list { list-style: none; counter-reset: step; margin: 20px 0; }
+.step-list li { counter-increment: step; padding: 16px 16px 16px 54px; position: relative; background: rgba(255,255,255,0.04); border-radius: 10px; margin-bottom: 10px; border: 1px solid #E5E5E5; line-height: 1.7; }
+.step-list li::before { content: counter(step); position: absolute; left: 14px; top: 16px; width: 28px; height: 28px; background: #0F1832; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; }
+.step-list li strong { color: white; }
+.step-list li code { background: rgba(255,255,255,0.04); padding: 2px 6px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #22D3EE; }
 
-.verdict {
-  background: linear-gradient(135deg, #2DE8A8 0%, #22D3EE 100%);
-  padding: 28px 32px;
-  border-radius: 14px;
-  margin: 28px 0;
-}
-.verdict h3 { margin-top: 0; color: #0B1226; }
-.verdict p { color: #0B1226; margin-bottom: 8px; }
+.highlight { background: rgba(45,232,168,0.06); padding: 20px 24px; border-radius: 10px; border-left: 4px solid #F5A623; margin: 20px 0; font-size: 15px; color: #5A4820; line-height: 1.7; }
+.highlight strong { color: white; }
+
+.limits-box { background: rgba(255,255,255,0.04); padding: 24px 28px; border-radius: 12px; border: 1px solid #E5E5E5; margin: 20px 0; }
+.limits-box h4 { margin-bottom: 12px; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: white; }
+.limit-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #F0F0F0; font-size: 14.5px; }
+.limit-row:last-child { border-bottom: none; }
+.limit-row strong { color: white; }
+.limit-row span { color: #2DE8A8; font-weight: 600; }
 
 .related-links { background: rgba(255,255,255,0.04); padding: 32px; border-radius: 14px; margin-top: 50px; border: 1px solid #E5E5E5; }
 .related-links a { display: block; padding: 10px 0; color: white; text-decoration: none; border-bottom: 1px solid #F0F0F0; font-weight: 500; }
@@ -89,7 +75,6 @@ p { font-size: 16px; color: rgba(255,255,255,0.8); line-height: 1.75; margin-bot
   nav { padding: 14px 20px; }
   .nav-links-sub { display: none; }
   .container { padding: 40px 20px; }
-  .vs-grid { grid-template-columns: 1fr; }
 }
 
 /* STANDARDISERT NAV */
@@ -420,114 +405,104 @@ footer {
 
 <article class="container">
   <div class="breadcrumb">
-    <a href="/">Hjem</a> / Claude vs ChatGPT
+    <a href="/">Hjem</a> / Publisering
   </div>
 
-  <h1>Claude vs ChatGPT: Hvilken er best for hjemmesider?</h1>
-  <p class="lede">Vi testet begge grundig i 2026. Her er den ærlige sammenligningen, uten markedsføring. Priser, kvalitet, norsk språk og konkrete bruksområder.</p>
+  <h1>Slik publiserer du hjemmeside gratis i 2026</h1>
+  <p class="lede">Dette er en sammenligning av gratis hosting-tjenester for hjemmesider. Vercel, Netlify, Cloudflare Pages og GitHub Pages. Inkluderer DNS-oppsett og domenekobling.</p>
 
   <div class="meta-info">
-    Publisert 23. april 2026 av IT-Firma.no. Lesetid: 5 minutter. Basert på ekte bruk.
+    Publisert 23. april 2026 av IT-Firma.no. Lesetid: 6 minutter.
   </div>
 
-  <h2>Kort svar</h2>
-  <p>Bruk <strong>ChatGPT</strong> for å lage selve prompten. Bruk <strong>Claude</strong> for å skrive koden. Begge har gratis versjoner som er gode nok for de fleste. Du trenger ikke velge én, bruk begge sammen.</p>
+  <h2>Hva er Vercel?</h2>
+  <p>Vercel er en skytjeneste som publiserer hjemmesider på internett. Du kobler Vercel til ditt GitHub repository, og Vercel henter automatisk HTML filen din og gjør den tilgjengelig for hele verden. Du trenger ikke servere, ingen FTP, ingen kommandolinje.</p>
 
-  <h2>Sammenligning side ved side</h2>
+  <p>Vercel er skapt av samme firma som laget Next.js, det mest populære rammeverket for React. De vet hva de driver med. Gratis planen er raus nok for de aller fleste hjemmesider.</p>
 
-  <div class="vs-grid">
-    <div class="vs-card claude">
-      <h3>Claude</h3>
-      <div class="price">Gratis</div>
-      <div class="price-sub">Pro 220 kr/mnd · Max 1100-2200 kr/mnd</div>
-      <ul>
-        <li>Lager ren, strukturert HTML og CSS</li>
-        <li>God på lange, komplekse prompter</li>
-        <li>Skriver godt norsk</li>
-        <li>200K token kontekst vindu</li>
-        <li>Følger detaljerte instruksjoner presist</li>
-        <li>Kan levere komplett HTML fil</li>
-        <li>Bedre på kode gjennomgang</li>
-      </ul>
-    </div>
-    <div class="vs-card chatgpt">
-      <h3>ChatGPT</h3>
-      <div class="price">Gratis</div>
-      <div class="price-sub">Go 88 kr · Plus 220 kr · Pro 1100-2200 kr</div>
-      <ul>
-        <li>Best på prompt engineering</li>
-        <li>Kan generere bilder (DALL E)</li>
-        <li>Flere integrasjoner med tredjepart</li>
-        <li>Raskere respons tid</li>
-        <li>Mer kreativ på konsept og ideer</li>
-        <li>Bredere kunnskap om markedsføring</li>
-        <li>Bedre på å lage oppsummeringer</li>
-      </ul>
-    </div>
+  <h2>Gratis plan (Hobby) grenser i 2026</h2>
+  <p>Vercel Hobby planen er gratis uten tidsbegrensning. Her er hva du får per måned:</p>
+
+  <div class="limits-box">
+    <h4>Inkludert i Hobby planen</h4>
+    <div class="limit-row"><strong>Dataoverføring</strong><span>100 GB per måned</span></div>
+    <div class="limit-row"><strong>Edge requests</strong><span>1 million per måned</span></div>
+    <div class="limit-row"><strong>Funksjonskall</strong><span>1 million per måned</span></div>
+    <div class="limit-row"><strong>Deployments</strong><span>Ubegrenset</span></div>
+    <div class="limit-row"><strong>SSL sertifikat</strong><span>Automatisk og gratis</span></div>
+    <div class="limit-row"><strong>Global CDN</strong><span>Inkludert</span></div>
+    <div class="limit-row"><strong>Egne domener</strong><span>Ubegrenset</span></div>
   </div>
 
-  <h2>Vår test: Lag en norsk bedriftshjemmeside</h2>
-  <p>Vi ga begge AI modellene nøyaktig samme prompt: "Lag en komplett hjemmeside for en bakeri i Bergen. Norsk bokmål. SEO optimalisert. HTML, CSS og JavaScript i en fil."</p>
-
-  <h3>Claude leverte</h3>
-  <p>En 900 linjers HTML fil. Ren kode. Semantisk struktur. Fem JSON LD skjemaer inkludert automatisk. Fargepalett som passet til bakeri. FAQ med seks spørsmål i prosa. Mobilvennlig ut av boksen. Kunne publiseres direkte uten endringer.</p>
-
-  <h3>ChatGPT leverte</h3>
-  <p>En 650 linjers HTML fil. Kvaliteten var god, men mindre detaljert. To JSON LD skjemaer. Generisk fargepalett (blå og grå). FAQ med fire spørsmål. Mobilvennlig, men manglet noen detaljer som måtte legges til manuelt.</p>
-
-  <div class="verdict">
-    <h3>Vår konklusjon</h3>
-    <p>For ren kodeskriving er Claude foreløpig sterkere. For brainstorming, prompt design og kreativt arbeid er ChatGPT sterkere.</p>
-    <p>Derfor anbefaler vi å bruke begge: la ChatGPT lage prompten, la Claude skrive koden.</p>
+  <div class="highlight">
+    <strong>Viktig:</strong> Hobby planen er kun tillatt for personlige, ikke kommersielle prosjekter. Hvis hjemmesiden din tjener penger eller er for en bedrift, må du oppgradere til Pro planen som koster 220 kr per måned.
   </div>
 
-  <h2>Priser sammenligning</h2>
+  <h2>Slik publiserer du steg for steg</h2>
+  <p>Hele prosessen tar 5 til 10 minutter første gang. Etter det går oppdateringer automatisk.</p>
 
-  <h3>Claude (alle planer, april 2026)</h3>
-  <p><strong>Free:</strong> Gratis. God for de fleste nybegynnere.<br>
-  <strong>Pro:</strong> 220 kr per måned (20 USD). 5 ganger mer bruk enn Free, Projects, Cowork, Claude Code.<br>
-  <strong>Max 5x:</strong> 1100 kr per måned (100 USD). 25 ganger mer bruk enn Free, Opus 4.7, prioritert tilgang.<br>
-  <strong>Max 20x:</strong> 2200 kr per måned (200 USD). 100 ganger mer bruk enn Free, nærmest ubegrenset.<br>
-  <strong>Team:</strong> 275 kr per bruker per måned (25 USD), minimum 5 brukere.<br>
-  Se <a href="https://claude.com/pricing" rel="noopener">claude.com/pricing</a> for oppdaterte priser.</p>
+  <ol class="step-list">
+    <li>Gå til <a href="https://vercel.com" rel="noopener">vercel.com</a> og klikk <strong>Sign Up</strong>.</li>
+    <li>Velg <strong>Continue with GitHub</strong>. Dette lenker kontoene dine sammen automatisk. Du trenger en GitHub konto først. Hvis du ikke har det, opprett en gratis på <a href="https://github.com" rel="noopener">github.com</a>.</li>
+    <li>Godkjenn tilgangen Vercel ber om. Vercel trenger å kunne lese repositoriene dine for å hente koden.</li>
+    <li>På Vercel dashbordet, klikk <strong>Add New</strong> og deretter <strong>Project</strong>.</li>
+    <li>Finn repositoriet som inneholder hjemmesiden din i listen. Klikk <strong>Import</strong> ved siden av det.</li>
+    <li>Vercel oppdager automatisk at det er en statisk HTML hjemmeside. Du trenger ikke konfigurere noe. Klikk <strong>Deploy</strong>.</li>
+    <li>Vent 30 sekunder. Når det er ferdig, får du en adresse som <code>dittprosjekt.vercel.app</code>. Klikk for å se siden live.</li>
+  </ol>
 
-  <h3>ChatGPT (alle planer, april 2026)</h3>
-  <p><strong>Free:</strong> Gratis, men med annonser i USA siden februar 2026.<br>
-  <strong>Go:</strong> 88 kr per måned (8 USD). Mer bruk, men har også annonser.<br>
-  <strong>Plus:</strong> 220 kr per måned (20 USD). GPT-5.4 Thinking, Sora, Deep Research, Agent.<br>
-  <strong>Pro (ny):</strong> 1100 kr per måned (100 USD, lansert 9. april 2026). 5 ganger mer bruk enn Plus.<br>
-  <strong>Pro:</strong> 2200 kr per måned (200 USD). 20 ganger Plus-bruk, GPT-5.4 Pro, o1 Pro mode.<br>
-  <strong>Business:</strong> 275 kr per bruker per måned (25 USD).<br>
-  Se <a href="https://chatgpt.com/pricing" rel="noopener">chatgpt.com/pricing</a> for oppdaterte priser.</p>
+  <h2>Slik kobler du ditt eget domene</h2>
+  <p>Vercel adressen er fin for testing, men du vil sannsynligvis ha ditt eget .no domene. Slik gjør du det:</p>
 
-  <h2>Når bruker jeg hvilken?</h2>
+  <ol class="step-list">
+    <li>På Vercel prosjektet, klikk <strong>Settings</strong> og deretter <strong>Domains</strong> i venstre meny.</li>
+    <li>Skriv inn domenet ditt (for eksempel <code>dittnavn.no</code>) og klikk <strong>Add</strong>.</li>
+    <li>Vercel viser nå hvilke DNS verdier du må legge til hos Domeneshop. Typisk en A oppføring som peker til 76.76.21.21.</li>
+    <li>Logg inn på <a href="https://domeneshop.no" rel="noopener">domeneshop.no</a>. Gå til domenet ditt og velg <strong>DNS innstillinger</strong>.</li>
+    <li>Slett eventuelle gamle A oppføringer. Legg inn de nye verdiene Vercel ga deg. Lagre.</li>
+    <li>Vent 10 til 60 minutter. Deretter er domenet ditt live med automatisk SSL sertifikat fra Vercel.</li>
+  </ol>
 
-  <h3>Bruk Claude når du skal:</h3>
-  <p>Skrive eller gjennomgå kode. Lage lange, strukturerte dokumenter. Følge komplekse instruksjoner. Jobbe med kodebaser. Lage hjemmesider fra en utfyllende prompt.</p>
+  <h2>Hvordan oppdateringer fungerer</h2>
+  <p>Når du har koblet Vercel til GitHub, skjer oppdateringer helt automatisk. Hver gang du pusher en endring til GitHub repositoriet, oppdager Vercel det og bygger en ny versjon av siden. Det tar typisk 10 til 30 sekunder.</p>
 
-  <h3>Bruk ChatGPT når du skal:</h3>
-  <p>Brainstorme ideer. Lage prompter for andre AI modeller. Generere bilder. Søke etter informasjon med web søk. Lage oppsummeringer av lange tekster.</p>
+  <p>Dette betyr at du kan gå tilbake til Claude, be om endringer, laste opp den nye HTML filen til GitHub, og siden oppdateres automatisk. Du trenger aldri å røre Vercel dashbordet igjen.</p>
+
+  <h2>Alternativer til Vercel</h2>
+  <p>Vercel er vårt førstevalg, men det finnes gode alternativer:</p>
+
+  <h3>Netlify</h3>
+  <p>Nesten identisk med Vercel. Samme priser, samme funksjoner. Hvis du allerede har Netlify konto, bruk den. Ingen grunn til å bytte.</p>
+
+  <h3>Cloudflare Pages</h3>
+  <p>Gratis med ubegrenset båndbredde, noe Vercel ikke har. Litt mer teknisk å sette opp. Best for mer tekniske brukere.</p>
+
+  <h3>GitHub Pages</h3>
+  <p>Gratis hosting direkte fra GitHub. Enklere oppsett, men færre funksjoner. Ikke like raskt som Vercel.</p>
 
   <h2>Ofte stilte spørsmål</h2>
 
-  <h3>Kan jeg bruke kun Claude?</h3>
-  <p>Ja. Du kan hoppe over ChatGPT og skrive prompten selv. Men ChatGPT gjør prompt engineering enklere og bedre enn å gjøre det manuelt.</p>
+  <h3>Er Vercel virkelig gratis?</h3>
+  <p>Ja, Hobby planen er gratis uten tidsbegrensning. Du betaler ingenting så lenge du holder deg innenfor grensene og bruker det til personlige prosjekter.</p>
 
-  <h3>Kan jeg bruke kun ChatGPT?</h3>
-  <p>Ja, ChatGPT kan også skrive kode. Men i våre tester leverer Claude jevnt over renere, mer strukturert HTML og CSS. For en hjemmeside er forskjellen tydelig.</p>
+  <h3>Hva skjer hvis jeg overskrider grensene?</h3>
+  <p>På Hobby planen stopper siden midlertidig til neste måned. Du får varsler i god tid. På Pro planen betaler du for overforbruk automatisk.</p>
 
-  <h3>Er det andre AI modeller jeg bør vurdere?</h3>
-  <p>Google Gemini er gratis og ganske god. Mistral og Le Chat er europeiske alternativer. Perplexity er best på research. For ren kode skriving er Claude og ChatGPT fortsatt ledende.</p>
+  <h3>Kan jeg ha flere hjemmesider gratis?</h3>
+  <p>Ja. Hobby planen tillater ubegrenset antall prosjekter. Hvert prosjekt får sine egne grenser.</p>
 
-  <h3>Hvordan betaler jeg for Claude Pro eller ChatGPT Plus fra Norge?</h3>
-  <p>Begge godtar vanlige norske kredittkort. Prisen er i dollar, så den kan variere litt med kursen. 20 dollar blir rundt 220 kroner.</p>
+  <h3>Trenger jeg å kunne kommandolinje?</h3>
+  <p>Nei. Alt gjøres i Vercel dashbordet i nettleseren. Du trenger aldri å åpne terminal.</p>
+
+  <h3>Hvor raskt er Vercel i Norge?</h3>
+  <p>Vercel har servere i 20 regioner inkludert Stockholm og Frankfurt. Norske besøkende får innhold levert på under 50 millisekunder.</p>
 
   <div class="related-links">
     <h3>Relaterte guider</h3>
     <a href="/">Hjem: Komplett guide for å lage hjemmeside med AI</a>
-    <a href="/prompt-mal/">Prompt mal for Claude og ChatGPT</a>
     <a href="/domene-guide/">Slik kjøper du et .no domene</a>
-    <a href="/publisering/">Slik publiserer du gratis på Vercel</a>
+    <a href="/prompt-mal/">Prompt mal for Claude og ChatGPT</a>
+    <a href="/claude-vs-chatgpt/">Claude vs ChatGPT sammenligning</a>
   </div>
 </article>
 

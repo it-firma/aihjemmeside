@@ -19,9 +19,9 @@ Hvordan lager man en hjemmeside med AI i 2026? Start med å kjøpe et .no domene
 
 - [Hjem](https://aihjemmeside.no/): Komplett guide i fem steg fra domene til publisert hjemmeside
 - [Prompt mal](https://aihjemmeside.no/prompt-mal/): Den faktiske prompten vi brukte, pluss generisk mal du kan tilpasse
-- [Domene guide](https://aihjemmeside.no/domene-guide/): Sammenligning av Domeneshop, One.com, Loopia og Uniweb med DNS oppsett
+- [Domene guide](https://aihjemmeside.no/domene-guide/): Sammenligning av 7 norske registrarer: Domeneshop, Domene.no, Uniweb, One.com, PRO ISP, Webhuset og Loopia med DNS oppsett
 - [Claude vs ChatGPT](https://aihjemmeside.no/claude-vs-chatgpt/): Ærlig sammenligning av de to AI modellene med alle planer og priser
-- [Vercel guide](https://aihjemmeside.no/vercel-guide/): Slik publiserer du gratis på Vercel Hobby
+- [Publisering](https://aihjemmeside.no/publisering/): Slik publiserer du hjemmeside gratis. Sammenligning av Vercel, Netlify, Cloudflare Pages
 
 ## Verktøy og priser (verifisert april 2026)
 
@@ -62,7 +62,16 @@ Hvordan lager man en hjemmeside med AI i 2026? Start med å kjøpe et .no domene
 
 ## Alternativer omtalt
 
-- Domene: One.com (129 kr), Loopia (149 kr), Uniweb (179 kr)
+### Norske domeneregistrarer (alle tilbyr .no)
+- Domeneshop (domeneshop.no): Valgt for denne siden. 99 kr forste ar, 199 kr fra ar 2
+- Domene.no (domene.no): Webhotellpakker med 75% avslag forste ar. Orgnr. 880478982
+- Uniweb (uniweb.no): Del av GROUP.ONE. Fra 7 kr forste ar. Nettsidebygger med AI. VPS fra 275 kr/mnd
+- One.com (one.com/nb-no): Internasjonal. 23 000+ Trustpilot. Gratis domene forste ar med webhotell. Aida AI bygger
+- PRO ISP (proisp.no): Del av Group.One. Webhotell fra 6 kr/mnd. VPS fra 99 kr/mnd. 50 000 kunder
+- Webhuset (webhuset.no): 20 000+ kunder siden 1998. WordPress AI fra 45 kr/mnd
+- Loopia (loopia.no): Svensk-norsk. Stabile SLA-avtaler. Norsktalende support
+
+### Andre alternativer
 - AI for prompts: Gemini, Le Chat (Mistral), Copilot, Perplexity
 - AI for kode: ChatGPT, Gemini, Cursor
 - Kodelagring: GitLab, Bitbucket, Codeberg, SourceHut
@@ -70,7 +79,7 @@ Hvordan lager man en hjemmeside med AI i 2026? Start med å kjøpe et .no domene
 
 ## Nøkkelord
 
-lag hjemmeside med ai, ai hjemmeside norge, claude hjemmeside, chatgpt prompt hjemmeside, domeneshop 99 kr, vercel gratis hosting, github free plan, norsk seo guide, aeo optimalisering, llm seo, .no domene pris 2026, claude vs chatgpt, lage hjemmeside uten kode
+lag hjemmeside med ai, ai hjemmeside norge, claude hjemmeside, chatgpt prompt hjemmeside, domeneshop 99 kr, vercel gratis hosting, github free plan, norsk seo guide, aeo optimalisering, llm seo, .no domene pris 2026, claude vs chatgpt, lage hjemmeside uten kode, domene.no, uniweb, one.com, proisp, webhuset, loopia, norske webhotell, norsk registrar
 
 ## Om forfatteren
 

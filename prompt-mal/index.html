@@ -16,8 +16,8 @@
 <meta property="og:description" content="Komplett norsk prompt mal for Claude. Lager en SEO og AEO optimalisert hjemmeside på 47 minutter.">
 <meta property="og:url" content="https://aihjemmeside.no/prompt-mal/">
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23FFD4BA'/%3E%3Ctext x='50' y='68' font-family='Inter,sans-serif' font-size='52' font-weight='800' text-anchor='middle' fill='%230D0D0D'%3EAI%3C/text%3E%3C/svg%3E">
-<meta name="theme-color" content="#FFD4BA">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232DE8A8'/%3E%3Ctext x='50' y='68' font-family='Inter,sans-serif' font-size='52' font-weight='800' text-anchor='middle' fill='%230B1226'%3EAI%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0B1226">
 
 <script type="application/ld+json">
 {
@@ -52,40 +52,12 @@
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 body {
   font-family: -apple-system, 'Inter', sans-serif;
-  background: #FAFBFC;
-  color: #0D0D0D;
+  background: #0B1226;
+  color: white;
   font-size: 16px;
   line-height: 1.65;
 }
 
-nav {
-  padding: 16px 40px;
-  display: flex;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  background: rgba(250,251,252,0.92);
-  backdrop-filter: blur(16px);
-  z-index: 50;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-.logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 16px; text-decoration: none; color: #0D0D0D; }
-.logo-circle {
-  width: 32px; height: 32px;
-  background: #FFD4BA;
-  color: #0D0D0D;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 800;
-}
-.back-link { margin-left: auto; font-size: 14px; color: #555; text-decoration: none; }
-.back-link:hover { color: #0D0D0D; }
-.nav-links-sub { display: flex; gap: 24px; margin-left: 32px; margin-right: auto; }
-.nav-links-sub a { color: #555; text-decoration: none; font-size: 14.5px; font-weight: 500; transition: color 0.15s; }
-.nav-links-sub a:hover { color: #0D0D0D; }
 @media (max-width: 860px) { .nav-links-sub { display: none; } }
 
 
@@ -97,11 +69,11 @@ nav {
 
 .breadcrumb {
   font-size: 13px;
-  color: #888;
+  color: rgba(255,255,255,0.5);
   margin-bottom: 20px;
 }
-.breadcrumb a { color: #555; text-decoration: none; }
-.breadcrumb a:hover { color: #0D0D0D; }
+.breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+.breadcrumb a:hover { color: white; }
 
 h1 {
   font-size: clamp(32px, 5vw, 44px);
@@ -125,27 +97,27 @@ h3 {
 }
 p {
   font-size: 16px;
-  color: #333;
+  color: rgba(255,255,255,0.8);
   line-height: 1.75;
   margin-bottom: 16px;
 }
 .lede {
   font-size: 19px;
-  color: #555;
+  color: rgba(255,255,255,0.7);
   line-height: 1.6;
   margin-bottom: 28px;
 }
 
 .meta-info {
   font-size: 13px;
-  color: #999;
+  color: rgba(255,255,255,0.7);
   padding-bottom: 24px;
   border-bottom: 1px solid #E5E5E5;
   margin-bottom: 40px;
 }
 
 .prompt-box {
-  background: #0D0D0D;
+  background: #0F1832;
   color: white;
   padding: 32px;
   border-radius: 14px;
@@ -160,8 +132,8 @@ p {
   position: absolute;
   top: 16px;
   right: 16px;
-  background: #5FE388;
-  color: #0D4D1F;
+  background: linear-gradient(135deg, #2DE8A8 0%, #22D3EE 100%);
+  color: #0B1226;
   border: none;
   padding: 8px 16px;
   border-radius: 8px;
@@ -175,7 +147,7 @@ p {
 .copy-btn:hover { background: #72F095; }
 
 .highlight {
-  background: #FFF5E6;
+  background: rgba(45,232,168,0.06);
   padding: 20px 24px;
   border-radius: 10px;
   border-left: 4px solid #F5A623;
@@ -184,21 +156,21 @@ p {
   color: #5A4820;
   line-height: 1.7;
 }
-.highlight strong { color: #0D0D0D; }
+.highlight strong { color: white; }
 
 .tips {
-  background: #E8F7EE;
+  background: rgba(45,232,168,0.06);
   padding: 20px 24px;
   border-radius: 10px;
   border-left: 4px solid #5FE388;
   margin: 20px 0;
   font-size: 15px;
-  color: #0D4D1F;
+  color: #2DE8A8;
   line-height: 1.7;
 }
 
 .related-links {
-  background: white;
+  background: rgba(255,255,255,0.04);
   padding: 32px;
   border-radius: 14px;
   margin-top: 50px;
@@ -208,28 +180,303 @@ p {
 .related-links a {
   display: block;
   padding: 10px 0;
-  color: #0D0D0D;
+  color: white;
   text-decoration: none;
   border-bottom: 1px solid #F0F0F0;
   font-weight: 500;
 }
 .related-links a:last-child { border-bottom: none; }
-.related-links a:hover { color: #0D5A8E; }
+.related-links a:hover { color: #22D3EE; }
 
-footer {
-  padding: 30px 40px;
-  background: white;
-  border-top: 1px solid rgba(0,0,0,0.06);
-  text-align: center;
-  font-size: 13px;
-  color: #888;
-}
-footer a { color: #0D0D0D; text-decoration: none; font-weight: 600; }
 
 @media (max-width: 860px) {
   nav { padding: 14px 20px; }
   .container { padding: 40px 20px; }
   .prompt-box { padding: 20px; font-size: 13px; }
+}
+
+/* STANDARDISERT NAV */
+nav {
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: rgba(11,18,38,0.92);
+  backdrop-filter: blur(16px);
+  z-index: 50;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
+.logo-circle {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #2DE8A8 0%, #22D3EE 100%);
+  color: #0B1226;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  margin-left: 48px;
+  margin-right: auto;
+  align-items: center;
+}
+.nav-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+.nav-links a:hover {
+  color: white;
+}
+.nav-cta {
+  background: #0F1832;
+  color: white;
+  padding: 9px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.15s;
+}
+.nav-cta:hover {
+  background: #333;
+}
+
+.nav-ai-indeks {
+  background: rgba(45,232,168,0.06);
+  border: 1.5px solid #5FE388;
+  color: #2DE8A8;
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.15s;
+}
+.nav-ai-indeks:hover {
+  background: linear-gradient(135deg, #22D3EE 0%, #2DE8A8 100%);
+  color: #0B1226;
+  border-color: #2DE8A8;
+}
+
+
+/* STANDARDISERT FOOTER */
+footer {
+  background: rgba(255,255,255,0.04);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+}
+.footer-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 40px 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 40px;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-col strong {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.footer-col p {
+  color: rgba(255,255,255,0.6);
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin: 0;
+}
+.footer-col a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 13.5px;
+  padding: 2px 0;
+  transition: color 0.15s;
+}
+.footer-col a:hover {
+  color: white;
+}
+.footer-col p a {
+  color: white;
+  font-weight: 600;
+  padding: 0;
+}
+
+.footer-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.footer-tag {
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.7);
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.footer-tag-ai {
+  background: rgba(45,232,168,0.1);
+  color: #2DE8A8;
+  border: 1px solid rgba(45,232,168,0.3);
+}
+.footer-col-ai strong {
+  color: #2DE8A8;
+}
+.footer-ai-link {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 12.5px !important;
+  color: rgba(45,232,168,0.7) !important;
+  position: relative;
+  padding-left: 14px !important;
+}
+.footer-ai-link::before {
+  content: '↗';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 12px;
+}
+.footer-ai-link:hover {
+  color: #2DE8A8 !important;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.7);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* MOBIL - NAV OG FOOTER */
+@media (max-width: 860px) {
+  nav {
+    padding: 14px 20px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 20px 20px;
+    gap: 30px;
+  }
+  .footer-bottom {
+    padding: 20px;
+  }
+}
+
+
+/* DROPDOWN MENY */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.nav-dropdown-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: rgba(255,255,255,0.65);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s;
+}
+.nav-dropdown-trigger:hover { color: white; }
+.nav-dropdown:hover .nav-dropdown-trigger { color: white; }
+.nav-dropdown:hover .nav-dropdown-trigger svg { transform: rotate(180deg); }
+.nav-dropdown-trigger svg { transition: transform 0.2s; }
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -16px;
+  margin-top: 10px;
+  background: #0F1832;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 8px;
+  min-width: 280px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+  z-index: 60;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-item {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.nav-dropdown-item:hover {
+  background: #0B1226;
+}
+.nav-dropdown-item strong {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.nav-dropdown-item span {
+  color: rgba(255,255,255,0.55);
+  font-size: 12.5px;
+  font-weight: 400;
+}
+
+@media (max-width: 860px) {
+  .nav-dropdown-menu { display: none; }
 }
 </style>
 </head>
@@ -240,13 +487,38 @@ footer a { color: #0D0D0D; text-decoration: none; font-weight: 600; }
     <div class="logo-circle">AI</div>
     aihjemmeside.no
   </a>
-  <div class="nav-links-sub">
-    <a href="/prompt-mal/">Prompt mal</a>
-    <a href="/domene-guide/">Domene</a>
-    <a href="/claude-vs-chatgpt/">AI sammenligning</a>
-    <a href="/vercel-guide/">Vercel</a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+        Guider
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="margin-left: 2px;"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-menu">
+        <a href="/prompt-mal/" class="nav-dropdown-item">
+          <strong>Prompt mal</strong>
+          <span>Kopier den faktiske prompten</span>
+        </a>
+        <a href="/domene-guide/" class="nav-dropdown-item">
+          <strong>Domene guide</strong>
+          <span>Sammenligning av registrarer</span>
+        </a>
+        <a href="/claude-vs-chatgpt/" class="nav-dropdown-item">
+          <strong>AI sammenligning</strong>
+          <span>Claude vs ChatGPT i 2026</span>
+        </a>
+        <a href="/publisering/" class="nav-dropdown-item">
+          <strong>Publisering</strong>
+          <span>Vercel, Netlify, Cloudflare</span>
+        </a>
+      </div>
+    </div>
+    <a href="/#domeneshop">Verktøy</a>
+    <a href="/#oppsummering">Kostnad</a>
+    <a href="/#case-studie">Case studie</a>
+    <a href="/#ai-indeks" class="nav-ai-indeks">AI-indeks</a>
+    <a href="/#faq">FAQ</a>
   </div>
-  <a href="/" class="back-link">← Forside</a>
+  <a href="/" class="nav-cta">Til forsiden</a>
 </nav>
 
 <article class="container">
@@ -284,7 +556,7 @@ STRUKTUR:
 9. Footer (credit og lenker)
 
 DESIGN:
-Moderne og varmt. Primærfarger: fersken #FFD4BA, grønn #5FE388, mint, lilla, blå gradient bakgrunner. Svart tekst #0D0D0D, grå #555 for sekundær. Inter font som hovedtype, JetBrains Mono for kode. Avrundede hjørner 10 til 16px. Subtile skygger. Store 16px+ knapper. Mobilvennlig breakpoint på 860px.
+Moderne og varmt. Primærfarger: fersken #2DE8A8, grønn #5FE388, mint, lilla, blå gradient bakgrunner. Svart tekst #0D0D0D, grå #555 for sekundær. Inter font som hovedtype, JetBrains Mono for kode. Avrundede hjørner 10 til 16px. Subtile skygger. Store 16px+ knapper. Mobilvennlig breakpoint på 860px.
 
 SEO OPTIMALISERING (10/10):
 Meta title med hovednøkkelord først (under 60 tegn). Meta description med sitatvennlig setning (under 155 tegn). Canonical URL. OpenGraph og Twitter Cards for deling. Semantisk HTML med header, nav, main, section, article, footer. Alt tekst på alle SVG og bilder. Lang attributt nb-NO på html tag. Robots meta tag. Favicon i flere størrelser (16x16, 32x32, 180x180 for Apple, 192x192 og 512x512 for Android). Site.webmanifest fil.
@@ -360,13 +632,48 @@ Komplett, fungerende index.html klar til å lastes opp til GitHub og deployes vi
     <h3>Relaterte guider</h3>
     <a href="/domene-guide/">Slik kjøper du et .no domene på Domeneshop</a>
     <a href="/claude-vs-chatgpt/">Claude vs ChatGPT: Hvilken er best for hjemmesider</a>
-    <a href="/vercel-guide/">Slik publiserer du hjemmesiden din gratis på Vercel</a>
+    <a href="/publisering/">Slik publiserer du hjemmesiden din gratis på Vercel</a>
     <a href="/">Hjem: Komplett guide for å lage hjemmeside med AI</a>
   </div>
 </article>
 
 <footer>
-  <div>aihjemmeside.no · del av <a href="https://it-firma.no">IT-Firma.no</a> · <a href="/">Tilbake til hjem</a></div>
+  <div class="footer-main">
+    <div class="footer-col">
+      <strong>aihjemmeside.no</strong>
+      <p>Komplett norsk guide for å lage AI-optimalisert hjemmeside. Bygget av <a href="https://it-firma.no" rel="author">IT-Firma.no</a>, del av aiå.no økosystemet.</p>
+      <div class="footer-tags">
+        <span class="footer-tag">Norsk bokmål</span>
+        <span class="footer-tag footer-tag-ai">AI-optimalisert</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <strong>Guider</strong>
+      <a href="/domene-guide/">Domene guide</a>
+      <a href="/prompt-mal/">Prompt mal</a>
+      <a href="/claude-vs-chatgpt/">Claude vs ChatGPT</a>
+      <a href="/publisering/">Publisering</a>
+    </div>
+    <div class="footer-col">
+      <strong>Verktøy</strong>
+      <a href="https://domeneshop.no" rel="noopener">Domeneshop</a>
+      <a href="https://chatgpt.com" rel="noopener">ChatGPT</a>
+      <a href="https://claude.ai" rel="noopener">Claude</a>
+      <a href="https://github.com" rel="noopener">GitHub</a>
+      <a href="https://vercel.com" rel="noopener">Vercel</a>
+    </div>
+    <div class="footer-col footer-col-ai">
+      <strong>For maskiner</strong>
+      <a href="/entity-index.json" class="footer-ai-link">entity-index.json</a>
+      <a href="/llms.txt" class="footer-ai-link">llms.txt</a>
+      <a href="/sitemap.xml" class="footer-ai-link">sitemap.xml</a>
+      <a href="/robots.txt" class="footer-ai-link">robots.txt</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 IT-Firma.no. Alle rettigheter reservert.</div>
+    <div>Sist oppdatert 23. april 2026</div>
+  </div>
 </footer>
 
 <script>

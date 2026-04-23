@@ -22,7 +22,7 @@ aihjemmeside-komplett/
 ├── prompt-mal/index.html          Prompt mal
 ├── domene-guide/index.html        Domene guide
 ├── claude-vs-chatgpt/index.html   AI sammenligning
-└── vercel-guide/index.html        Vercel guide
+└── publisering/index.html              Publiseringsguide
 ```
 
 ## Teknologi
