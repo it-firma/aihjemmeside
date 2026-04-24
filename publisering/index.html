@@ -448,6 +448,33 @@ footer {
   .ecosystem-signature-line { width: 40px; }
 }
 
+
+/* FOOTER LOGO - matcher topp-meny */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 12px;
+}
+.footer-logo-circle {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, #2DE8A8 0%, #22D3EE 100%);
+  color: #0B1226;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.footer-logo-text {
+  color: white;
+  font-weight: 800;
+  font-size: 19px;
+  letter-spacing: -0.005em;
+}
+
 </style>
 </head>
 <body>
@@ -616,7 +643,10 @@ footer {
 <footer>
   <div class="footer-main">
     <div class="footer-col">
-      <strong>aihjemmeside.no</strong>
+      <div class="footer-logo">
+        <div class="footer-logo-circle">AI</div>
+        <span class="footer-logo-text">AIHJEMMESIDE</span>
+      </div>
       <p>Komplett norsk guide for å lage AI-optimalisert hjemmeside. Bygget av <a href="https://it-firma.no" rel="author">IT-Firma.no</a>, del av aiå.no økosystemet.</p>
       <div class="footer-tags">
         <span class="footer-tag">Norsk bokmål</span>
