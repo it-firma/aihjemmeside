@@ -361,61 +361,91 @@ footer {
   .nav-dropdown-menu { display: none; }
 }
 
-/* AIA.NO OKOSYSTEM RAD */
+/* AIA.NO OKOSYSTEM RAD - mystisk */
 .ecosystem-row {
   background: #0B1226;
-  padding: 32px 40px;
+  padding: 40px 40px;
   border-top: 1px solid rgba(255,255,255,0.06);
   border-bottom: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+  overflow: hidden;
+}
+.ecosystem-row::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(45,232,168,0.3) 20%, rgba(139,92,246,0.3) 80%, transparent 100%);
+}
+.ecosystem-row::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; height: 120px;
+  background: radial-gradient(ellipse, rgba(45,232,168,0.08) 0%, transparent 70%);
+  pointer-events: none;
 }
 .ecosystem-inner {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-.ecosystem-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  font-weight: 800;
-  color: white;
-  letter-spacing: 0.15em;
+  position: relative;
+  z-index: 1;
 }
 .ecosystem-links {
   display: flex;
-  gap: 28px;
   align-items: center;
-  flex: 1;
+  justify-content: center;
+  gap: 24px;
   flex-wrap: wrap;
 }
 .ecosystem-links a {
-  color: rgba(255,255,255,0.8);
-  font-size: 15px;
+  color: rgba(255,255,255,0.85);
+  font-size: 17px;
   font-weight: 500;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  transition: color 0.15s;
+  transition: color 0.2s;
 }
 .ecosystem-links a:hover {
   color: #2DE8A8;
 }
-.ecosystem-cta {
-  color: #2DE8A8;
-  font-family: 'JetBrains Mono', monospace;
+.ecosystem-separator {
+  color: rgba(255,255,255,0.2);
   font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: opacity 0.15s;
+  user-select: none;
 }
-.ecosystem-cta:hover {
-  opacity: 0.8;
+.ecosystem-signature {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
 }
-@media (max-width: 860px) {
-  .ecosystem-row { padding: 24px 20px; }
-  .ecosystem-inner { gap: 16px; }
-  .ecosystem-links { gap: 16px; }
-  .ecosystem-label { font-size: 11px; }
+.ecosystem-signature-line {
+  width: 60px;
+  height: 1px;
+}
+.ecosystem-signature-line.left {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 100%);
+}
+.ecosystem-signature-line.right {
+  background: linear-gradient(270deg, transparent 0%, rgba(255,255,255,0.15) 100%);
+}
+.ecosystem-signature-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+@media (max-width: 720px) {
+  .ecosystem-row { padding: 28px 20px; }
+  .ecosystem-links { gap: 14px; font-size: 15px; }
+  .ecosystem-links a { font-size: 14px; }
+  .ecosystem-signature-line { width: 40px; }
 }
 
 </style>
@@ -425,7 +455,7 @@ footer {
 <nav>
   <a href="/" class="logo">
     <div class="logo-circle">AI</div>
-    aihjemmeside.no
+    AIHJEMMESIDE
   </a>
   <div class="nav-links">
     <div class="nav-dropdown">
@@ -565,16 +595,21 @@ footer {
 </article>
 
 
-<!-- AIA.NO OKOSYSTEM RAD -->
+<!-- AIA.NO OKOSYSTEM RAD - mystisk -->
 <div class="ecosystem-row">
   <div class="ecosystem-inner">
-    <div class="ecosystem-label">AIÅ.NO ØKOSYSTEM</div>
     <div class="ecosystem-links">
       <a href="https://aihjemmeside.no">aihjemmeside.no</a>
+      <span class="ecosystem-separator">·</span>
       <a href="https://ainettside.no">ainettside.no</a>
+      <span class="ecosystem-separator">·</span>
       <a href="https://ainettbutikk.no">ainettbutikk.no</a>
     </div>
-    <a href="https://aiå.no" class="ecosystem-cta">Utforsk aiå.no →</a>
+    <div class="ecosystem-signature">
+      <span class="ecosystem-signature-line left"></span>
+      <span class="ecosystem-signature-text">aiå.no</span>
+      <span class="ecosystem-signature-line right"></span>
+    </div>
   </div>
 </div>
 
