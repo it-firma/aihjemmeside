@@ -346,128 +346,11 @@ h3 {
 /* HERO */
 .hero {
   background: #0B1226;
+  text-align: center;
   padding: 60px 40px 50px;
-  position: relative;
-  overflow: hidden;
 }
-.hero-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-.hero-left { text-align: left; }
-.hero-left .lede { margin-left: 0; margin-right: 0; max-width: 480px; }
-.hero-left .meta-badge { margin-left: 0; }
-.hero-left .cta-row { justify-content: flex-start; }
-.hero-left .jump-to { margin-left: 0; margin-right: auto; }
-.hero-left .tiny { text-align: left; }
-@media (max-width: 960px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero-left { text-align: center; }
-  .hero-left .lede { margin-left: auto; margin-right: auto; }
-  .hero-left .meta-badge { margin-left: auto; }
-  .hero-left .cta-row { justify-content: center; }
-  .hero-left .jump-to { margin-left: auto; margin-right: auto; }
-  .hero-left .tiny { text-align: center; }
-}
-
-/* TERMINAL ANIMATION */
-.terminal-window {
-  background: #0F1832;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(45,232,168,0.08);
-}
-.terminal-bar {
-  padding: 12px 14px;
-  background: rgba(255,255,255,0.02);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  display: flex;
-  gap: 6px;
-  align-items: center;
-}
-.terminal-dots {
-  display: flex;
-  gap: 6px;
-}
-.terminal-dot {
-  width: 11px; height: 11px;
-  border-radius: 50%;
-}
-.tdot-red { background: #FF5F57; }
-.tdot-yellow { background: #FEBC2E; }
-.tdot-green { background: #28C840; }
-.terminal-url {
-  margin-left: 10px;
-  background: rgba(0,0,0,0.3);
-  padding: 4px 12px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.terminal-url-dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: #2DE8A8;
-  box-shadow: 0 0 6px #2DE8A8;
-}
-.terminal-url-text {
-  color: rgba(255,255,255,0.7);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11.5px;
-}
-.terminal-body {
-  padding: 22px 24px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  line-height: 2;
-  min-height: 220px;
-}
-.terminal-header-line {
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 6px;
-}
-.terminal-line {
-  color: #2DE8A8;
-  opacity: 0;
-  animation: termFadeIn 0.6s ease-out forwards;
-}
-.terminal-line:nth-child(2) { animation-delay: 0.4s; }
-.terminal-line:nth-child(3) { animation-delay: 1.2s; }
-.terminal-line:nth-child(4) { animation-delay: 2.0s; }
-.terminal-line:nth-child(5) { animation-delay: 2.8s; }
-.terminal-line:nth-child(6) { animation-delay: 3.6s; }
-.terminal-time {
-  color: rgba(255,255,255,0.4);
-  font-size: 11px;
-}
-.terminal-cursor {
-  display: inline-block;
-  width: 8px;
-  height: 14px;
-  background: white;
-  margin-left: 4px;
-  vertical-align: middle;
-  animation: termBlink 1s infinite;
-  opacity: 0;
-  animation: termCursorShow 1s step-start 4.3s forwards, termBlink 1s infinite 4.3s;
-}
-@keyframes termFadeIn {
-  0% { opacity: 0; transform: translateY(6px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes termBlink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
-}
-@keyframes termCursorShow {
-  to { opacity: 1; }
-}
+.hero .inner { text-align: center; }
+.hero .lede { margin-left: auto; margin-right: auto; }
 .cta-row { display: flex; gap: 12px; justify-content: center; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
 .btn-primary {
   background: linear-gradient(135deg, #2DE8A8 0%, #22D3EE 100%);
@@ -1607,83 +1490,55 @@ footer { background: #0B1226; border-top: 1px solid rgba(255,255,255,0.08); font
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-grid">
-    
-    <div class="hero-left">
-      <div class="meta-badge">
-        <div class="meta-badge-dot"></div>
-        Denne siden ble bygget på 47 minutter
-      </div>
-      <h1 class="hero-h1">
+  <div class="inner">
+    <div class="meta-badge">
+      <div class="meta-badge-dot"></div>
+      Denne siden ble bygget på 47 minutter
+    </div>
+    <h1 class="hero-h1">
         <span class="h1-line-solid">Lag AI</span>
         <span class="h1-line-outline">hjemmeside</span>
         <span class="h1-line-gradient">akkurat som denne.</span>
       </h1>
-      <p class="lede">Siden du leser akkurat nå er beviset. Bygget med ChatGPT, Claude, GitHub, Vercel og Domeneshop for 99 kroner. AI-optimalisert fra første sekund. Her er hvordan du gjør det samme.</p>
-      <div class="cta-row">
-        <a href="#domeneshop" class="btn-primary">Start guiden
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8m0 0L8 4m3 3L8 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </a>
-        <a href="#faq" class="btn-secondary">Les vanlige spørsmål
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4 2H2v8h8V8M7 2h3v3M10 2L5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-
-      <!-- HOPP TIL -->
-      <div class="jump-to">
-        <span class="jump-label">Hopp til steg:</span>
-        <a href="#domeneshop" class="jump-step">
-          <span class="jump-num">1</span>
-          <span class="jump-name">Domene</span>
-        </a>
-        <span class="jump-divider">→</span>
-        <a href="#chatgpt" class="jump-step">
-          <span class="jump-num">2</span>
-          <span class="jump-name">ChatGPT</span>
-        </a>
-        <span class="jump-divider">→</span>
-        <a href="#claude" class="jump-step">
-          <span class="jump-num">3</span>
-          <span class="jump-name">Claude</span>
-        </a>
-        <span class="jump-divider">→</span>
-        <a href="#github" class="jump-step">
-          <span class="jump-num">4</span>
-          <span class="jump-name">GitHub</span>
-        </a>
-        <span class="jump-divider">→</span>
-        <a href="#vercel" class="jump-step">
-          <span class="jump-num">5</span>
-          <span class="jump-name">Vercel</span>
-        </a>
-      </div>
-      <div class="tiny">Publisert 23. april 2026</div>
+    <p class="lede">Siden du leser akkurat nå er beviset. Bygget med ChatGPT, Claude, GitHub, Vercel og Domeneshop for 99 kroner. AI-optimalisert fra første sekund. Her er hvordan du gjør det samme.</p>
+    <div class="cta-row">
+      <a href="#domeneshop" class="btn-primary">Start guiden
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8m0 0L8 4m3 3L8 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+      <a href="#faq" class="btn-secondary">Les vanlige spørsmål
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4 2H2v8h8V8M7 2h3v3M10 2L5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
 
-    <div class="hero-right">
-      <div class="terminal-window">
-        <div class="terminal-bar">
-          <div class="terminal-dots">
-            <div class="terminal-dot tdot-red"></div>
-            <div class="terminal-dot tdot-yellow"></div>
-            <div class="terminal-dot tdot-green"></div>
-          </div>
-          <div class="terminal-url">
-            <div class="terminal-url-dot"></div>
-            <span class="terminal-url-text">aihjemmeside.no</span>
-          </div>
-        </div>
-        <div class="terminal-body">
-          <div class="terminal-header-line"># Byggelogg — denne siden</div>
-          <div class="terminal-line">✓ Kjøpte aihjemmeside.no <span class="terminal-time">— 99 kr · 0:08</span></div>
-          <div class="terminal-line">✓ Skrev prompt med ChatGPT <span class="terminal-time">— 0:15</span></div>
-          <div class="terminal-line">✓ Genererte kode med Claude <span class="terminal-time">— 0:28</span></div>
-          <div class="terminal-line">✓ Lastet opp til GitHub <span class="terminal-time">— 0:35</span></div>
-          <div class="terminal-line">✓ Publisert på Vercel <span class="terminal-time">— 0:47</span><span class="terminal-cursor"></span></div>
-        </div>
-      </div>
+    <!-- HOPP TIL -->
+    <div class="jump-to">
+      <span class="jump-label">Hopp til steg:</span>
+      <a href="#domeneshop" class="jump-step">
+        <span class="jump-num">1</span>
+        <span class="jump-name">Domene</span>
+      </a>
+      <span class="jump-divider">→</span>
+      <a href="#chatgpt" class="jump-step">
+        <span class="jump-num">2</span>
+        <span class="jump-name">ChatGPT</span>
+      </a>
+      <span class="jump-divider">→</span>
+      <a href="#claude" class="jump-step">
+        <span class="jump-num">3</span>
+        <span class="jump-name">Claude</span>
+      </a>
+      <span class="jump-divider">→</span>
+      <a href="#github" class="jump-step">
+        <span class="jump-num">4</span>
+        <span class="jump-name">GitHub</span>
+      </a>
+      <span class="jump-divider">→</span>
+      <a href="#vercel" class="jump-step">
+        <span class="jump-num">5</span>
+        <span class="jump-name">Vercel</span>
+      </a>
     </div>
-
+    <div class="tiny">Publisert 23. april 2026</div>
   </div>
 </section>
 
