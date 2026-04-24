@@ -486,26 +486,131 @@ h3 {
 }
 .prompt-quote {
   background: #0F1832;
-  color: white;
-  padding: 28px 32px;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 15px;
-  line-height: 1.7;
-  margin: 24px 0;
+  overflow: hidden;
   position: relative;
+  margin-top: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 0 1px rgba(45,232,168,0.08);
 }
-.prompt-quote::before {
-  content: '"';
-  position: absolute;
-  top: 4px;
-  left: 12px;
-  font-size: 52px;
+.prompt-quote-header {
+  padding: 14px 20px;
+  background: rgba(255,255,255,0.02);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.prompt-quote-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.prompt-quote-dots {
+  display: flex;
+  gap: 5px;
+}
+.prompt-quote-dots > div {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+}
+.prompt-quote-filename {
+  color: rgba(255,255,255,0.6);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  margin-left: 8px;
+}
+.prompt-quote-meta {
+  color: rgba(255,255,255,0.45);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+}
+.prompt-quote-copy {
+  background: linear-gradient(135deg, #2DE8A8 0%, #22D3EE 100%);
+  color: #0B1226;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.prompt-quote-copy:hover { transform: translateY(-1px); }
+.prompt-quote-copy.copied {
+  background: rgba(45,232,168,0.15);
   color: #2DE8A8;
-  font-family: 'Inter', sans-serif;
-  line-height: 1;
+  border: 1px solid rgba(45,232,168,0.3);
 }
-.prompt-quote-body { padding-left: 28px; font-style: italic; }
+.prompt-quote-body {
+  padding: 24px 28px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.8);
+  max-height: 240px;
+  overflow: hidden;
+  position: relative;
+  white-space: pre-wrap;
+  transition: max-height 0.4s ease;
+}
+.prompt-quote.expanded .prompt-quote-body {
+  max-height: none;
+}
+.prompt-quote-body::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, transparent 0%, #0F1832 100%);
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.prompt-quote.expanded .prompt-quote-body::before {
+  opacity: 0;
+}
+.prompt-quote-body strong,
+.prompt-quote-body .section-label {
+  color: #2DE8A8;
+  font-weight: 700;
+  font-style: normal;
+}
+.prompt-quote-expand {
+  display: flex;
+  justify-content: center;
+  padding: 16px 20px 20px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.01);
+}
+.prompt-quote-expand-btn {
+  background: rgba(45,232,168,0.08);
+  color: #2DE8A8;
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid rgba(45,232,168,0.25);
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.prompt-quote-expand-btn:hover {
+  background: rgba(45,232,168,0.15);
+  border-color: rgba(45,232,168,0.5);
+}
+.prompt-quote-expand-btn .chevron {
+  transition: transform 0.3s;
+  display: inline-block;
+}
+.prompt-quote.expanded .prompt-quote-expand-btn .chevron {
+  transform: rotate(180deg);
+}
 .prompt-caption {
   font-size: 14px;
   color: rgba(255,255,255,0.6);
@@ -1568,16 +1673,28 @@ footer { background: #0B1226; border-top: 1px solid rgba(255,255,255,0.08); font
     <h2>Hemmeligheten? La ChatGPT skrive prompten til Claude.</h2>
     <p class="lede">Vi skal være ærlige. Vi brukte <strong>ChatGPT</strong> til å strukturere prompten, og <strong>Claude</strong> til å skrive koden. Hver AI er god på forskjellige ting. ChatGPT er flink på prompt engineering, Claude er flink på å skrive ren, lesbar kode. Kombinasjonen er sterkere enn begge hver for seg.</p>
 
-    <div class="prompt-quote">
-      <div class="prompt-quote-body">ROLLE: Du er en senior frontend utvikler og SEO spesialist. Lag en komplett, produksjonsklar norskspråklig hjemmeside i en enkelt HTML fil for IT-Firma.no. Hjemmesiden skal publiseres på domenet aihjemmeside.no via Vercel.
+    <div class="prompt-quote" id="actual-prompt">
+      <div class="prompt-quote-header">
+        <div class="prompt-quote-header-left">
+          <div class="prompt-quote-dots">
+            <div style="background: #FF5F57;"></div>
+            <div style="background: #FEBC2E;"></div>
+            <div style="background: #28C840;"></div>
+          </div>
+          <span class="prompt-quote-filename">prompt.txt</span>
+          <span class="prompt-quote-meta">· 577 ord · 11 seksjoner</span>
+        </div>
+        <button class="prompt-quote-copy" onclick="copyPrompt(this)">⎘ Kopier</button>
+      </div>
+      <div class="prompt-quote-body"><span class="section-label">ROLLE:</span> Du er en senior frontend utvikler og SEO spesialist. Lag en komplett, produksjonsklar norskspråklig hjemmeside i en enkelt HTML fil for IT-Firma.no. Hjemmesiden skal publiseres på domenet aihjemmeside.no via Vercel.
 
-KONTEKST OM BEDRIFTEN:
+<span class="section-label">KONTEKST OM BEDRIFTEN:</span>
 aihjemmeside.no er en meta side som viser besøkende hvordan man lager en hjemmeside med AI. Siden er sitt eget bevis og demonstrerer metoden den beskriver. Målgruppen er norske bedriftseiere og privatpersoner som vil lage hjemmeside uten å kunne kode. Det som skiller oss er ærligheten: vi viser eksakt hvilke verktøy vi brukte, hva det kostet, og hvor lang tid det tok.
 
-TEKNISK:
+<span class="section-label">TEKNISK:</span>
 Kun HTML, CSS og minimal vanilla JavaScript. Ingen rammeverk, ingen build steg, ingen npm. Inline alt i en index.html fil. Bruk Google Fonts via @import i CSS, ikke next/font. Ingen emoji i HTML, bruk kun inline SVG for ikoner. Ingen backtick template literals.
 
-STRUKTUR:
+<span class="section-label">STRUKTUR:</span>
 1. Navigasjon (sticky, backdrop blur, logo til venstre, ankerlenker i midten, CTA knapp til høyre)
 2. Hero seksjon (stor tittel på to linjer, lede tekst, to knapper, meta badge øverst)
 3. Statistikk rad (fire tall med etiketter i kontrastfarge)
@@ -1588,30 +1705,56 @@ STRUKTUR:
 8. Final CTA (mørk bakgrunn med fargede sirkler som dekor)
 9. Footer (credit og lenker)
 
-DESIGN:
+<span class="section-label">DESIGN:</span>
 Moderne og varmt. Primærfarger: fersken #2DE8A8, grønn #5FE388, mint, lilla, blå gradient bakgrunner. Svart tekst #0D0D0D, grå #555 for sekundær. Inter font som hovedtype, JetBrains Mono for kode. Avrundede hjørner 10 til 16px. Subtile skygger. Store 16px+ knapper. Mobilvennlig breakpoint på 860px.
 
-SEO OPTIMALISERING (10/10):
+<span class="section-label">SEO OPTIMALISERING (10/10):</span>
 Meta title med hovednøkkelord først (under 60 tegn). Meta description med sitatvennlig setning (under 155 tegn). Canonical URL. OpenGraph og Twitter Cards for deling. Semantisk HTML med header, nav, main, section, article, footer. Alt tekst på alle SVG og bilder. Lang attributt nb-NO på html tag. Robots meta tag. Favicon i flere størrelser (16x16, 32x32, 180x180 for Apple, 192x192 og 512x512 for Android). Site.webmanifest fil.
 
-AEO OG LLM SEO (for ChatGPT, Claude, Perplexity, Gemini):
+<span class="section-label">AEO OG LLM SEO (for ChatGPT, Claude, Perplexity, Gemini):</span>
 Inkluder JSON-LD schema for tre typer samtidig: HowTo med numbered steps, FAQPage med question and acceptedAnswer, TechArticle eller LocalBusiness med author, datePublished og dateModified. Hurtigsvar boks på toppen med konkret setning under 50 ord som AI kan sitere ordrett. FAQ i prosa, ikke accordion, slik at søkemotorer kan lese alt. Konkrete tall og priser i teksten. Direkte svar på spørsmål i h3 format. Inkluder "Sist oppdatert" dato synlig. Lenker til kilder og dokumentasjon.
 
-LLM DISCOVERY FILER (separate filer jeg skal generere selv etterpå):
+<span class="section-label">LLM DISCOVERY FILER (separate filer jeg skal generere selv etterpå):</span>
 llms.txt i rot med oversikt over siden
 robots.txt som tillater GPTBot, ClaudeBot, PerplexityBot, Google Extended, Bingbot
 sitemap.xml med alle interne lenker
 entity-index.json med navngitte entiteter
 
-INNHOLD:
+<span class="section-label">INNHOLD:</span>
 Alt på norsk bokmål. Naturlig språk uten markedsførings klisjeer. Ingen bindestreker i sammensatte ord som ikke trenger dem. Ingen em dash. Ingen "egentlig", "faktisk", "altså". Skriv som en erfaren menneskelig forfatter, ikke en AI. Nevn konkrete priser, datoer, tall. Fortell hva dere faktisk har brukt av verktøy.
 
-TILGJENGELIGHET:
+<span class="section-label">TILGJENGELIGHET:</span>
 Kontrastforhold minimum 4.5:1 for normal tekst. Focus states på alle interaktive elementer. Alt tekst på bilder. aria labels der det trengs. Tastaturnavigering fungerer.
 
-LEVERANSE:
+<span class="section-label">LEVERANSE:</span>
 Komplett, fungerende index.html klar til å lastes opp til GitHub og deployes via Vercel. Ingen placeholder tekst, ingen TODO kommentarer. Send hele filen, ikke utdrag.</div>
+      <div class="prompt-quote-expand">
+        <button class="prompt-quote-expand-btn" onclick="togglePrompt()">
+          <span class="expand-text">Vis hele prompten</span>
+          <span class="chevron">↓</span>
+        </button>
+      </div>
     </div>
+    
+    <script>
+      function togglePrompt() {
+        var el = document.getElementById('actual-prompt');
+        var btn = el.querySelector('.expand-text');
+        el.classList.toggle('expanded');
+        btn.textContent = el.classList.contains('expanded') ? 'Skjul prompten' : 'Vis hele prompten';
+      }
+      function copyPrompt(btn) {
+        var text = document.querySelector('#actual-prompt .prompt-quote-body').innerText;
+        navigator.clipboard.writeText(text).then(function() {
+          btn.classList.add('copied');
+          btn.innerHTML = '✓ Kopiert!';
+          setTimeout(function() {
+            btn.classList.remove('copied');
+            btn.innerHTML = '⎘ Kopier';
+          }, 2000);
+        });
+      }
+    </script>
 
     <div class="prompt-caption">
       Dette er den faktiske prompten vi limte inn i claude.ai. Vil du bruke malen selv? <a href="/prompt-mal/" style="color: #22D3EE; text-decoration: underline; font-weight: 600;">Se generisk mal du kan tilpasse</a>.
