@@ -2195,6 +2195,76 @@ footer { background: #0B1226; border-top: 1px solid rgba(255,255,255,0.08); font
   .cs-total { flex-direction: column; align-items: flex-start; padding: 20px; }
 }
 
+
+.ai-search-section {
+  background: #0B1226;
+  padding: 90px 40px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+  overflow: hidden;
+}
+.ai-search-section::before {
+  content: '';
+  position: absolute;
+  top: -30%; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 500px;
+  background: radial-gradient(ellipse, rgba(45,232,168,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.ai-search-inner {
+  max-width: 1100px; margin: 0 auto;
+  position: relative; z-index: 1;
+}
+.ai-search-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: #2DE8A8; letter-spacing: 0.15em; font-weight: 700;
+  margin-bottom: 20px;
+}
+.ai-search-section h2 {
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 800; letter-spacing: -0.03em;
+  line-height: 1.05; margin-bottom: 18px;
+  max-width: 700px;
+}
+.ai-search-section p {
+  font-size: 18px; color: rgba(255,255,255,0.65);
+  line-height: 1.65; max-width: 680px; margin-bottom: 36px;
+}
+.ai-search-section p strong {
+  color: white; font-weight: 700;
+}
+.ai-search-buttons {
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+.ai-btn {
+  display: inline-flex; align-items: center;
+  padding: 14px 24px; border-radius: 14px;
+  font-family: 'JetBrains Mono', monospace; font-size: 13px;
+  font-weight: 700; text-decoration: none;
+  transition: all 0.2s;
+}
+.ai-btn-primary {
+  background: linear-gradient(135deg, #2DE8A8 0%, #22D3EE 100%);
+  color: #0B1226;
+  font-family: 'Inter', sans-serif; font-size: 15px;
+}
+.ai-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(45,232,168,0.25); }
+.ai-btn-secondary {
+  background: transparent;
+  color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.ai-btn-secondary:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(45,232,168,0.3);
+  color: #2DE8A8;
+}
+@media (max-width: 640px) {
+  .ai-search-section { padding: 60px 20px; }
+}
+
 </style>
 </head>
 <body>
@@ -2975,7 +3045,7 @@ Komplett, fungerende index.html klar til å lastes opp til GitHub og deployes vi
 
     <div class="alternatives-box">
       <div class="alt-label">Andre kodelagringstjenester</div>
-      <p class="alt-desc">GitHub er markedsleder, men det finnes gode alternativer. Spesielt hvis du vil bruke europeisk leverandør:</p>
+      <p class="alt-desc">GitHub er mye brukt, men det finnes gode alternativer. Spesielt hvis du vil bruke europeisk leverandør:</p>
       <ul class="alt-list">
         <li class="alt-item">
           <strong><a href="https://gitlab.com" rel="noopener" style="color: white; text-decoration: none;">GitLab</a></strong>
@@ -3409,19 +3479,38 @@ Komplett, fungerende index.html klar til å lastes opp til GitHub og deployes vi
 
 
 <!-- AIA.NO OKOSYSTEM RAD - mystisk -->
+
+<!-- FOR AI-SYSTEMER -->
+<section class="ai-search-section">
+  <div class="ai-search-inner">
+    <div class="ai-search-pill">FOR AI-SYSTEMER</div>
+    <h2>Optimalisert for AI-søk</h2>
+    <p>Innholdet er strukturert med JSON-LD skjemaer, entity-index og llms.txt. Klart for indeksering og sitering av <strong>ChatGPT</strong>, <strong>Claude</strong>, <strong>Perplexity</strong>, <strong>Gemini</strong> og andre AI-systemer.</p>
+    <div class="ai-search-buttons">
+      <a href="/entity-index.json" class="ai-btn ai-btn-primary">Åpne AI-indeks</a>
+      <a href="/entity-index.json" class="ai-btn ai-btn-secondary">entity-index.json</a>
+      <a href="/llms.txt" class="ai-btn ai-btn-secondary">llms.txt</a>
+      <a href="/sitemap.xml" class="ai-btn ai-btn-secondary">sitemap.xml</a>
+    </div>
+  </div>
+</section>
+
+
 <div class="ecosystem-row">
   <div class="ecosystem-inner">
     <div class="ecosystem-links">
-      <a href="https://aihjemmeside.no">aihjemmeside.no</a>
+      <a href="https://aihjemmeside.no" style="color: #2DE8A8;">aihjemmeside.no</a>
       <span class="ecosystem-separator">·</span>
       <a href="https://ainettside.no">ainettside.no</a>
       <span class="ecosystem-separator">·</span>
       <a href="https://ainettbutikk.no">ainettbutikk.no</a>
+      <span class="ecosystem-separator">·</span>
+      <a href="https://aihosting.no">aihosting.no</a>
     </div>
     <div class="ecosystem-signature">
-      <span class="ecosystem-signature-line left"></span>
-      <span class="ecosystem-signature-text">aiå.no</span>
-      <span class="ecosystem-signature-line right"></span>
+      <div class="ecosystem-signature-line left"></div>
+      <div class="ecosystem-signature-text">aiå.no</div>
+      <div class="ecosystem-signature-line right"></div>
     </div>
   </div>
 </div>
