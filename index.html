@@ -1543,6 +1543,150 @@ footer { background: #0B1226; border-top: 1px solid rgba(255,255,255,0.08); font
   letter-spacing: -0.005em;
 }
 
+
+/* PHILOSOPHY / TIMELINE SECTION */
+.philosophy-section {
+  background: #0F1832;
+  padding: 70px 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.philosophy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background: rgba(45,232,168,0.08);
+  border: 1px solid rgba(45,232,168,0.2);
+  border-radius: 100px;
+  margin-bottom: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: #2DE8A8;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+.philosophy-badge-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #2DE8A8;
+  box-shadow: 0 0 6px #2DE8A8;
+}
+.philosophy-title {
+  color: white !important;
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 12px !important;
+}
+.philosophy-lede {
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 560px;
+  margin-bottom: 40px !important;
+}
+.timeline {
+  position: relative;
+  padding-left: 44px;
+  margin-top: 32px;
+}
+.timeline-line {
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg,
+    #2DE8A8 0%,
+    #22D3EE 35%,
+    #3B82F6 70%,
+    #6366F1 100%);
+  border-radius: 2px;
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 28px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot {
+  position: absolute;
+  left: -44px;
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #0F1832;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timeline-dot::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.timeline-item[data-color="1"] .timeline-dot {
+  border: 2px solid #2DE8A8;
+  box-shadow: 0 0 12px rgba(45,232,168,0.5);
+}
+.timeline-item[data-color="1"] .timeline-dot::after { background: #2DE8A8; }
+.timeline-item[data-color="2"] .timeline-dot {
+  border: 2px solid #22D3EE;
+  box-shadow: 0 0 12px rgba(34,211,238,0.5);
+}
+.timeline-item[data-color="2"] .timeline-dot::after { background: #22D3EE; }
+.timeline-item[data-color="3"] .timeline-dot {
+  border: 2px solid #3B82F6;
+  box-shadow: 0 0 12px rgba(59,130,246,0.5);
+}
+.timeline-item[data-color="3"] .timeline-dot::after { background: #3B82F6; }
+.timeline-item[data-color="4"] .timeline-dot {
+  border: 2px solid #6366F1;
+  box-shadow: 0 0 12px rgba(99,102,241,0.5);
+}
+.timeline-item[data-color="4"] .timeline-dot::after { background: #6366F1; }
+
+.timeline-content {
+  padding-top: 2px;
+}
+.timeline-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.timeline-header h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.timeline-label {
+  font-family: 'JetBrains Mono', monospace;
+  color: rgba(255,255,255,0.35);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+.timeline-content p {
+  color: rgba(255,255,255,0.7);
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 620px;
+}
+
+@media (max-width: 720px) {
+  .philosophy-section { padding: 50px 20px; }
+  .timeline { padding-left: 36px; }
+  .timeline-dot { left: -36px; width: 20px; height: 20px; }
+  .timeline-line { left: 9px; }
+  .timeline-item { padding-bottom: 24px; }
+}
+
 </style>
 </head>
 <body>
@@ -1766,54 +1910,61 @@ Komplett, fungerende index.html klar til å lastes opp til GitHub og deployes vi
   </div>
 </section>
 
-<!-- FILOSOFI: Hvorfor domenet forst -->
-<section style="background: #0F1832; padding: 60px 40px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+<!-- FILOSOFI: Timeline -->
+<section class="philosophy-section">
   <div class="inner">
-    <span class="prompt-label" style="background: rgba(139,92,246,0.15); color: #C4B5FD; border: 1px solid rgba(139,92,246,0.3);">Viktig prinsipp</span>
-    <h2 style="color: white;">Start alltid med domenet</h2>
-    <p class="lede" style="color: rgba(255,255,255,0.75);">Mange bygger hjemmesiden først, så leter etter et ledig domene. Det er feil rekkefølge. Domenet bestemmer alt: bedriftsnavn, epost, sosiale medier, og hvordan folk finner deg på Google.</p>
+    <div class="philosophy-badge">
+      <span class="philosophy-badge-dot"></span>
+      VIKTIG PRINSIPP
+    </div>
+    <h2 class="philosophy-title">Start alltid med domenet</h2>
+    <p class="philosophy-lede">Domenet bestemmer alt. Bedriftsnavn, epost, SEO, og hvordan folk finner deg på Google.</p>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px;">
-      <div style="background: rgba(255,255,255,0.04); padding: 22px 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.07);">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 10px;">
-  <circle cx="16" cy="17" r="11" stroke="#A78BFA" stroke-width="2"/>
-  <path d="M16 11V17L20 19" stroke="#A78BFA" stroke-width="2" stroke-linecap="round"/>
-  <path d="M10 3L14 5" stroke="#A78BFA" stroke-width="2" stroke-linecap="round"/>
-  <path d="M22 3L18 5" stroke="#A78BFA" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="16" cy="17" r="1.5" fill="#A78BFA"/>
-</svg>
-        <h3 style="margin-bottom: 8px;">SEO tar tid</h3>
-        <p style="font-size: 14px; color: rgba(255,255,255,0.7); margin: 0; line-height: 1.6;">Et domene som er 2 år gammelt rangerer bedre enn et nytt, selv med samme innhold. Jo tidligere du registrerer, jo tidligere begynner Google å bygge tillit.</p>
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      
+      <div class="timeline-item" data-color="1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>SEO tar tid</h3>
+            <span class="timeline-label">GRUNN 01</span>
+          </div>
+          <p>Et domene som er 2 år gammelt rangerer bedre enn et nytt, selv med samme innhold. Jo tidligere du registrerer, jo tidligere begynner Google å bygge tillit.</p>
+        </div>
       </div>
-      <div style="background: rgba(255,255,255,0.04); padding: 22px 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.07);">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 10px;">
-  <circle cx="16" cy="16" r="12" stroke="#A78BFA" stroke-width="2"/>
-  <circle cx="16" cy="16" r="7" stroke="#A78BFA" stroke-width="2"/>
-  <circle cx="16" cy="16" r="2.5" fill="#A78BFA"/>
-  <path d="M16 2V6M16 26V30M2 16H6M26 16H30" stroke="#A78BFA" stroke-width="2" stroke-linecap="round"/>
-</svg>
-        <h3 style="margin-bottom: 8px;">Domenet styrer konseptet</h3>
-        <p style="font-size: 14px; color: rgba(255,255,255,0.7); margin: 0; line-height: 1.6;">Hvis drømmenavnet er opptatt, må konseptet endres. Start med å finne et ledig navn, bygg deretter resten rundt det.</p>
+
+      <div class="timeline-item" data-color="2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>Domenet styrer konseptet</h3>
+            <span class="timeline-label">GRUNN 02</span>
+          </div>
+          <p>Hvis drømmenavnet er opptatt, må konseptet endres. Start med å finne et ledig navn, bygg deretter resten rundt det.</p>
+        </div>
       </div>
-      <div style="background: rgba(255,255,255,0.04); padding: 22px 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.07);">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 10px;">
-  <rect x="4" y="7" width="24" height="18" rx="2" stroke="#A78BFA" stroke-width="2"/>
-  <path d="M4 10L16 18L28 10" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="25" cy="9" r="4" fill="#5FE388" stroke="#FFFFFF" stroke-width="1.5"/>
-  <path d="M25 7V11M23 9H27" stroke="#0D4D1F" stroke-width="1.5" stroke-linecap="round"/>
-</svg>
-        <h3 style="margin-bottom: 8px;">Du trenger epost</h3>
-        <p style="font-size: 14px; color: rgba(255,255,255,0.7); margin: 0; line-height: 1.6;">hei@dittfirma.no ser 100 ganger mer profesjonelt ut enn dittfirma@gmail.com. Uten domene, ingen profesjonell epost.</p>
+
+      <div class="timeline-item" data-color="3">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>Du trenger epost</h3>
+            <span class="timeline-label">GRUNN 03</span>
+          </div>
+          <p>hei@dittfirma.no ser 100 ganger mer profesjonelt ut enn dittfirma@gmail.com. Uten domene, ingen profesjonell epost.</p>
+        </div>
       </div>
-      <div style="background: rgba(255,255,255,0.04); padding: 22px 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.07);">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 10px;">
-  <path d="M16 3C11 3 7 7 7 12C7 15.5 9 17.5 10.5 19.5C11.5 21 12 22 12 24H20C20 22 20.5 21 21.5 19.5C23 17.5 25 15.5 25 12C25 7 21 3 16 3Z" stroke="#A78BFA" stroke-width="2" stroke-linejoin="round"/>
-  <path d="M12 24V27C12 27.5 12.5 28 13 28H19C19.5 28 20 27.5 20 27V24" stroke="#A78BFA" stroke-width="2"/>
-  <path d="M14 29H18" stroke="#A78BFA" stroke-width="2" stroke-linecap="round"/>
-  <path d="M13 13L16 16L19 13" stroke="#A78BFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-        <h3 style="margin-bottom: 8px;">Dette er vår egen historie</h3>
-        <p style="font-size: 14px; color: rgba(255,255,255,0.7); margin: 0; line-height: 1.6;">Vi kjøpte aihjemmeside.no først. Deretter bestemte vi hva siden skulle handle om. Hele konseptet kom fra domenet.</p>
+
+      <div class="timeline-item" data-color="4">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>Vår egen historie</h3>
+            <span class="timeline-label">GRUNN 04</span>
+          </div>
+          <p>Vi kjøpte aihjemmeside.no først. Deretter bestemte vi hva siden skulle handle om. Hele konseptet kom fra domenet.</p>
+        </div>
       </div>
     </div>
   </div>
